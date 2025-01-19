@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -209,78 +208,222 @@ background: linear-gradient(90deg, #5b859e, #81a5b8);
         }
     
         
-        @media screen and (min-width: 2560px) and (min-height: 1440px) {
-            .initial-image {
-                margin-top: 600px; 
-            }
-            .container {
-                margin-top: 220px; 
-            }
-        }
-    
-        @media screen and (min-width: 1920px) and (min-height: 1080px) {
-            .initial-image {
-                margin-top: 330px;
-            }
-            .container {
-                margin-top: 200px; 
-            }
-        }
-    
-        @media screen and (min-width: 1600px) and (max-width: 1919px) {
-            .initial-image {
-                margin-top: 270px; 
-            }
-            .container {
-                margin-top: 150px; 
-            }
-        }
-    
-        @media screen and (min-width: 1366px) and (max-width: 1599px) {
-            .initial-image {
-                margin-top: 150px; 
-            }
-            .container {
-                margin-top: 120px; 
-        }
-    }
-    
-        @media screen and (min-width: 1280px) and (max-width: 1365px) {
-            .initial-image {
-                margin-top: 130px; 
-            }
-            .container {
-                margin-top: 110px; 
-            }
-        }
-    
-        @media screen and (min-width: 1024px) and (max-width: 1279px) {
-            .initial-image {
-                margin-top: 40px; 
-            }
-            .container {
-                margin-top: 100px; 
-            }
-        }
-    
-        @media screen and (min-width: 768px) and (max-width: 1023px) {
-            .initial-image {
-                margin-top: 110px; 
-            }
-            .container {
-                margin-top: 90px; 
-            }
-        }
-    
-        @media screen and (max-width: 767px) {
-            .initial-image {
-                margin-top: 10px; 
-            }
-            .container {
-                margin-top: 80px; 
-            }
+/* Estilos gerais (já aplicados a dispositivos móveis com ajustes menores para desktop) */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  overflow-y: auto;
+  background: transparent;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+}
+
+.logo {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  z-index: 0;
+  margin-top: -60px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -70px;
+  width: 110%;
+}
+
+/* Estilos específicos para telas pequenas (smartphones) */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 10px;
+    transform: none;
+  }
+
+  .logo {
+    max-width: 250px;
+    margin-top: -40px;
+  }
+
+  .buttons {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: -50px;
+  }
+
+  .nav-arrow {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    height: 70px;
+    font-size: 12px;
+  }
+
+  .form-container {
+    padding: 15px;
+  }
+
+  .form-container input,
+  .form-container select,
+  .form-container textarea {
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .form-container button {
+    height: 60px;
+    font-size: 14px;
+  }
+
+  .btn {
+    min-width: 220px;
+    height: 70px;
+    font-size: 12px;
+    padding: 12px 16px;
+  }
+
+  .credits {
+    font-size: 12px;
+  }
+}
+
+/* Estilos específicos para telas muito pequenas (iPhone SE, Android pequenos) */
+@media (max-width: 375px) {
+  .logo {
+    max-width: 200px;
+  }
+
+  .button {
+    font-size: 10px;
+    height: 60px;
+    padding: 8px 0;
+  }
+
+  .form-container input,
+  .form-container select,
+  .form-container textarea {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .btn {
+    min-width: 180px;
+    font-size: 10px;
+    height: 60px;
+  }
+
+  .credits {
+    padding: 10px;
+  }
+}
+
+/* Estilos para tablets e telas maiores */
+@media (min-width: 768px) {
+  .container {
+    max-width: 800px;
+  }
+
+  .button {
+    font-size: 16px;
+    height: 90px;
+  }
+
+  .btn {
+    font-size: 14px;
+    min-width: 260px;
+  }
+}
+
+      /* Media Queries */
+      @media only screen and (max-width: 900px) {
+        body {
+          margin: 0.5rem;
+          margin-left: 0.5rem;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          font-family: "Poppins", sans-serif;
+          overflow-y: auto;
+          background: transparent;
         }
 
+        .buttons {
+          height: auto;
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .button {
+          width: calc(20% - 5px); /* Ajuste o tamanho dos botões para 90% da largura */
+          font-size: 60%;
+          margin: 2px;
+          padding: 2%;
+          flex: 1 1 15%; /* Altera para ocupar toda a largura em telas menores */
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .button .icon {
+          margin-right: 10px;
+          height: 1.15rem;
+          width: auto;
+        }
+
+        .form-container {
+          margin-left: 0.5rem;
+        }
+
+        .sem-sublinhado {
+          text-decoration: none; /* Remove o sublinhado */
+        }
+        .btn {
+        font-family: "Poppins", sans-serif;
+        outline: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 160px;
+        border: 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        padding: 16px 20px;
+        color: #c76119;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+        background-color: white;
+        border-radius: 1.15rem;
+        height: 90px;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 800;
+        margin-top: -100%;
+      }
+    }
         .loader-container {
     position: fixed;
     top: 0;
