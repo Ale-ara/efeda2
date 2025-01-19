@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -178,114 +177,75 @@ background: linear-gradient(90deg, #5b859e, #81a5b8);
     max-width: 300px; /* Limita a largura máxima */
     max-height: 300px; /* Limita a altura máxima */
     position: absolute;
-    top: 40px; /* Subiu 20px acima do topo original */
+    top: 60px; /* Posição inicial da imagem */
     left: 50%;
     transform: translateX(-50%);
     z-index: 0;
-    margin-top: 0; /* Pode ser zerado se `top` for usado */
     transition: transform 0.3s ease-in-out; /* Transição suave para o zoom */
+    visibility: visible; /* Garantir que a imagem seja visível */
 }
 
 .initial-image:hover {
     transform: translateX(-50%) scale(1.1); /* Aplica o zoom mantendo a posição central */
 }
 
-/* Demais estilos */
-.card.active + .initial-image {
-    display: none; 
-}
+/* Media Queries Ajustadas */
 
-input[type="submit"] {
-    width: 100%;
-    height: 68px;
-    background-color: #8ab7ca;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-input[type="submit"]:hover {
-    background-color: #375f70;
-}
-
-/* Media Queries */
-@media screen and (min-width: 2560px) and (min-height: 1440px) {
+/* Telas muito grandes (2560x1440) */
+@media screen and (min-width: 2560px) {
     .initial-image {
-        margin-top: 650px; 
-    }
-    .container {
-        margin-top: 220px; 
+        top: 600px; /* Subir mais para telas grandes */
     }
 }
 
-@media screen and (min-width: 1920px) and (min-height: 1080px) {
+/* Telas grandes (1920x1080) */
+@media screen and (min-width: 1920px) {
     .initial-image {
-        margin-top: 330px;
-    }
-    .container {
-        margin-top: 200px; 
+        top: 330px; /* Ajuste para telas grandes */
     }
 }
 
+/* Telas médias (1600x900) */
 @media screen and (min-width: 1600px) and (max-width: 1919px) {
     .initial-image {
-        margin-top: 270px; 
-    }
-    .container {
-        margin-top: 150px; 
+        top: 270px; /* Ajuste para telas médias */
     }
 }
 
+/* Telas médias (1366x768) */
 @media screen and (min-width: 1366px) and (max-width: 1599px) {
     .initial-image {
-        margin-top: 150px; 
-    }
-    .container {
-        margin-top: 120px; 
+        top: 150px; /* Ajuste para telas médias menores */
     }
 }
 
+/* Telas médias pequenas (1280x720) */
 @media screen and (min-width: 1280px) and (max-width: 1365px) {
     .initial-image {
-        margin-top: 130px; 
-    }
-    .container {
-        margin-top: 110px; 
+        top: 130px; /* Ajuste para telas menores */
     }
 }
 
+/* Telas pequenas (1024x768) */
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
     .initial-image {
-        margin-top: 40px; 
-    }
-    .container {
-        margin-top: 100px; 
+        top: 40px; /* Ajuste para telas pequenas */
     }
 }
 
+/* Telas muito pequenas (768x480) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .initial-image {
-        margin-top: 110px; 
-    }
-    .container {
-        margin-top: 90px; 
+        top: 110px; /* Ajuste para telas muito pequenas */
     }
 }
 
+/* Telas muito pequenas (menos de 768px) */
 @media screen and (max-width: 767px) {
     .initial-image {
-        margin-top: 130px; 
-    }
-    .container {
-        margin-top: 80px; 
+        top: 130px; /* Ajuste para telas muito pequenas */
     }
 }
-
-
 
         .loader-container {
     position: fixed;
