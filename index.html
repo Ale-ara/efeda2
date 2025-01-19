@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -171,13 +172,14 @@ background: linear-gradient(90deg, #5b859e, #81a5b8);
             justify-content: space-around; 
             margin-bottom: 20px; 
         }
+    
         .initial-image {
     display: block;
     margin: 0 auto 20px;
     max-width: 300px; /* Limita a largura máxima */
     max-height: 300px; /* Limita a altura máxima */
     position: absolute;
-    top: 60px; /* Posição inicial da imagem */
+    top: 40px; /* Posição inicial da imagem */
     left: 50%;
     transform: translateX(-50%);
     z-index: 0;
@@ -188,64 +190,96 @@ background: linear-gradient(90deg, #5b859e, #81a5b8);
 .initial-image:hover {
     transform: translateX(-50%) scale(1.1); /* Aplica o zoom mantendo a posição central */
 }
-
-/* Media Queries Ajustadas */
-
-/* Telas muito grandes (2560x1440) */
-@media screen and (min-width: 2560px) {
-    .initial-image {
-        top: 600px; /* Subir mais para telas grandes */
+    
+        input[type="submit"] {
+            width: 100%;
+            height: 68px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: rgba(0, 0, 0, 0.637);
+        }
+    
+        
+        @media screen and (min-width: 2560px) and (min-height: 1440px) {
+            .initial-image {
+                margin-top: 600px; 
+            }
+            .container {
+                margin-top: 220px; 
+            }
+        }
+    
+        @media screen and (min-width: 1920px) and (min-height: 1080px) {
+            .initial-image {
+                margin-top: 330px;
+            }
+            .container {
+                margin-top: 200px; 
+            }
+        }
+    
+        @media screen and (min-width: 1600px) and (max-width: 1919px) {
+            .initial-image {
+                margin-top: 270px; 
+            }
+            .container {
+                margin-top: 150px; 
+            }
+        }
+    
+        @media screen and (min-width: 1366px) and (max-width: 1599px) {
+            .initial-image {
+                margin-top: 150px; 
+            }
+            .container {
+                margin-top: 120px; 
+        }
     }
-}
-
-/* Telas grandes (1920x1080) */
-@media screen and (min-width: 1920px) {
-    .initial-image {
-        top: 330px; /* Ajuste para telas grandes */
-    }
-}
-
-/* Telas médias (1600x900) */
-@media screen and (min-width: 1600px) and (max-width: 1919px) {
-    .initial-image {
-        top: 270px; /* Ajuste para telas médias */
-    }
-}
-
-/* Telas médias (1366x768) */
-@media screen and (min-width: 1366px) and (max-width: 1599px) {
-    .initial-image {
-        top: 150px; /* Ajuste para telas médias menores */
-    }
-}
-
-/* Telas médias pequenas (1280x720) */
-@media screen and (min-width: 1280px) and (max-width: 1365px) {
-    .initial-image {
-        top: 130px; /* Ajuste para telas menores */
-    }
-}
-
-/* Telas pequenas (1024x768) */
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-    .initial-image {
-        top: 40px; /* Ajuste para telas pequenas */
-    }
-}
-
-/* Telas muito pequenas (768x480) */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .initial-image {
-        top: 110px; /* Ajuste para telas muito pequenas */
-    }
-}
-
-/* Telas muito pequenas (menos de 768px) */
-@media screen and (max-width: 767px) {
-    .initial-image {
-        top: 130px; /* Ajuste para telas muito pequenas */
-    }
-}
+    
+        @media screen and (min-width: 1280px) and (max-width: 1365px) {
+            .initial-image {
+                margin-top: 130px; 
+            }
+            .container {
+                margin-top: 110px; 
+            }
+        }
+    
+        @media screen and (min-width: 1024px) and (max-width: 1279px) {
+            .initial-image {
+                margin-top: 40px; 
+            }
+            .container {
+                margin-top: 100px; 
+            }
+        }
+    
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            .initial-image {
+                margin-top: 110px; 
+            }
+            .container {
+                margin-top: 90px; 
+            }
+        }
+    
+        @media screen and (max-width: 767px) {
+            .initial-image {
+                margin-top: 10px; 
+            }
+            .container {
+                margin-top: 80px; 
+            }
+        }
 
         .loader-container {
     position: fixed;
@@ -546,6 +580,19 @@ background: linear-gradient(90deg, #5b859e, #81a5b8);
         transform: translate(-50%, -50%) scale(1);
     }
 
+    
+    .logo-container {
+  position: relative;
+  display: inline-block;
+  overflow: visible; /* Permite que a imagem saia do contêiner, se necessário */
+  transition: transform 0.3s ease-in-out; /* Transição suave para animações */
+  text-align: center; /* Garante centralização no contêiner */
+}
+      
+.logo-container:hover {
+  transform: scale(1.05); /* Leve zoom */
+  filter: brightness(1.1); /* Aumenta o brilho ao passar o mouse */
+}
     
 
 </style>
